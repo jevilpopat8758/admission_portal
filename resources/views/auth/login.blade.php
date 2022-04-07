@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 
@@ -50,11 +51,11 @@
                            <div class="panel-heading">
                               <ul class="nav nav-tabs">
                                  <li class="active"><a href="#tab1default" data-toggle="tab" aria-expanded="true">Register</a></li>
-                                 <li class=""><a href="#tab2default" data-toggle="tab" aria-expanded="false">Login                </a></li>
+                                 <li class=""><a href="#tab2default" data-toggle="tab" aria-expanded="true">Login</a></li>
                               </ul>
                            </div>
+                           <div class="tab-content">
                            <div class="panel-body">
-                              <div class="tab-content">
                                  <div class="tab-pane fade active in">
                                     <div class="desktop_withoutpopup">
                                       <form method="POST" action="{{ route('register') }}">
@@ -71,7 +72,7 @@
                                                 @enderror
                                                 <span class="help-block"></span>
                                              </div>
-                                             <div class="form-group label-floating reg_name_div" style="">
+                                             <div class="form-group label-floating reg_name_div">
                                                 <div class="input text"><label class="control-label widget_label" for="name">{{ __('Name') }}<span class="required">*</span></label>
                                                    <input type="text" id="name" name="name" class="form-control widget_input @error('name') is-invalid @enderror" placeholder="Enter Name *" value="{{ old('name') }}"></div>
                                                    @error('name')
@@ -83,7 +84,7 @@
                                              </div>
                                              <div class="form-group label-floating reg_email_div Email_email">
                                                 <div class="input text"><label class="control-label widget_label" for="email">{{ __('Email Address') }}<span class="required">*</span></label>
-                                                   <input type="text" id="email" name="Email" autocomplete="email" class="form-control widget_input @error('email') is-invalid @enderror" placeholder="Enter Email Address *" value="{{ old('email') }}"></div>
+                                                   <input type="text" id="email" name="email" autocomplete="email" class="form-control widget_input @error('email') is-invalid @enderror" placeholder="Enter Email Address *" value="{{ old('email') }}"></div>
                                                    @error('email')
                                                       <span class="invalid-feedback" role="alert">
                                                           <strong>{{ $message }}</strong>
@@ -91,13 +92,13 @@
                                                    @enderror
                                                <span class="help-block"></span>
                                              </div>
-                                           <div class="form-group label-floating reg_name_div" style="">
+                                           <div class="form-group label-floating reg_name_div">
                                                 <div class="input text"><label class="control-label widget_label" for="mobilenumber">Mobile Number <span class="required">*</span></label>
                                                    <input type="text" name="name" id="Name" autocomplete="off" class="form-control widget_input"placeholder="Enter Mobile Number *" value=""></div>
                                                 <span class="help-block"></span>
                                              </div>
-                                            <div class="form-group label-floating reg_state_id_div StateId field-select" style="">
-                                                <select name="state_id" id="StateId" class="form-control select-arrow-cust widget_input" data-label="Select State *" data-none-selected-text="Select State">
+                                            <div class="form-group label-floating reg_state_id_div StateId field-select">
+                                                <select name="state" id="StateId" class="form-control select-arrow-cust widget_input" data-label="Select State *" data-none-selected-text="Select State">
                                                    <option value="" selected="selected">Select State *</option>
                                                    <option value="26909">Andaman and Nicobar</option>
                                                    <option value="26920">Andhra Pradesh</option>
@@ -107,30 +108,30 @@
                                                 </select>
                                                 <span class="help-block"></span>
                                              </div>
-                                             <div class="form-group label-floating reg_city_id_div CityId field-select" style="">
-                                                <select name="city_id" id="CityId" class="form-control select-arrow-cust widget_input" disabled="disabled" data-label="Select City *" data-none-selected-text="Select City">
-                                                   <option value="" selected="selected">Select City *</option>
-                                                   <option value="Test" selected> Test</option>
+                                             <div class="form-group label-floating reg_city_id_div CityId field-select">
+                                                <select name="city" id="CityId" class="form-control select-arrow-cust widget_input" data-label="Select City *" data-none-selected-text="Select City">
+                                                   <option value="">Select City</option>
+                                                   <option value="Test">Test</option>
                                                 </select>
                                                 <span class="help-block"></span>
                                              </div>
                                              <div class="clearfix"></div>
-                                             <div class="form-group label-floating reg_university_id_div UniversityId field-select" style="">
-                                                <select name="university_id" id="UniversityId" class="form-control select-arrow-cust widget_input" onchange="GetChildByMachineKey(this.value,'CourseId');" data-label="Select Institute *" data-none-selected-text="Select New Campus">
+                                             <div class="form-group label-floating reg_university_id_div UniversityId field-select">
+                                                <select name="university" id="UniversityId" class="form-control select-arrow-cust widget_input" onchange="GetChildByMachineKey(this.value,'CourseId');" data-label="Select Institute *" data-none-selected-text="Select New Campus">
                                                    <option value="" selected="selected">Select Institute *</option>
                                                    <option value="196118">Mullana</option>
                                                 </select>
                                                 <span class="help-block"></span>
                                              </div>
-                                             <div class="form-group label-floating reg_course_id_div CourseId field-select" style="">
-                                                <select name="course_id" id="CourseId" class="form-control select-arrow-cust widget_input" onchange="GetChildByMachineKey(this.value,'SpecializationId');" data-label="Select Course *" data-none-selected-text="Select Course">
+                                             <div class="form-group label-floating reg_course_id_div CourseId field-select">
+                                                <select name="course" id="CourseId" class="form-control select-arrow-cust widget_input" onchange="GetChildByMachineKey(this.value,'SpecializationId');" data-label="Select Course *" data-none-selected-text="Select Course">
                                                    <option value="" selected="selected">Select Course *</option>
                                                    <option value="test" selected>test</option>
                                                 </select>
                                                 <span class="help-block"></span>
                                              </div>
-                                             <div class="form-group label-floating field-select  reg_specialization_id_div" style="">
-                                                <select name="specialization_id" id="SpecializationId" data-label="Select Specialisation *" class="form-control select-arrow-cust widget_input" data-none-selected-text="Select Specialisation">
+                                             <div class="form-group label-floating field-select  reg_specialization_id_div">
+                                                <select name="specialization" id="SpecializationId" data-label="Select Specialisation *" class="form-control select-arrow-cust widget_input" data-none-selected-text="Select Specialisation">
                                                    <option value="" selected="selected">Select Specialisation *</option>
                                                    <option value="test" selected>test</option>
                                                 </select>
