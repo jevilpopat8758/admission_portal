@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
@@ -16,10 +17,11 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-Route::group(['middleware'=>'auth'], function () {
+Route::group(['middleware'=>'auth','verified'], function () {
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home',[App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home',[App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
