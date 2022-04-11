@@ -18,13 +18,13 @@
     <meta name="description"
         content="Admission 2021. MM(DU), Mullana North India&rsquo;s Best Private University in Ambala, Haryana providing courses in MBBS, MD, MS, OTT, MLT, BPT, MPT, Nursing, B.Tech, M.Tech, B.Sc, M.Sc, BCA, MCA, BBA, MBA, B.Com, Diploma, HMCT, Pharm D, B.Pharma, M.Pharma, App">
     <link href="{{asset('img/logo.png')}}" type="image/x-icon" rel="icon">
-    <link href="img/logo.png" type="image/x-icon" rel="shortcut icon">
-    <link rel="stylesheet" href="css/form.css?1640168971">
-    <link rel="stylesheet" href="css/bootstrap.min2.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="{{asset('img/logo.png')}}" type="image/x-icon" rel="shortcut icon">
+    <link rel="stylesheet" href="{{asset('css/form.css?1640168971')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min2.css')}}">
+    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
     <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -36,19 +36,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="css/css-plugin-collections.css">
+    <link rel="stylesheet" href="{{asset('css/css-plugin-collections.css')}}">
 </head>
 
 <body>
-    <div class="kode_wrapper">
+    <div class="kode_wrapper mt-3">
         <!-- ======= Hero Section ======= -->
         <section class="d-flex align-items-center mmdu-img" id="hero">
             <div class="container">
-                <img class="mmdu-logo pd-bt-20" src="img/logo.png">
+                <img class="mmdu-logo pd-bt-20" src="{{asset('img/logo.png')}}">
                 <div class="row">
-                    <div class="col-lg-8 d-flex flex-column justify-content-center pt-lg-0" data-aos="fade-up"
+                    <div class="col-lg-6 d-flex flex-column justify-content-between pt-lg-0" data-aos="fade-up"
                         data-aos-delay="200"></div>
-                    <div class="col-lg-4 mmdu-adsnfrm" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="col-lg-6 mmdu-adsnfrm" data-aos="zoom-in" data-aos-delay="200">
                         <div class="formContainer form-absolute block-class link-border form-position-right">
                             <!--  <div class="form-inner"><div class="form-clickOuter"><span class="form-click opacityprimary">Register Now</span></div>-->
                             <h2 class="text-center form-heading">Admissions Open</h2>
@@ -160,6 +160,8 @@
                                                                 data-none-selected-text="Select City">
                                                                 <option value="">Select City</option>
                                                                 <option value="Test">Test</option>
+                                                                <option value="Rajkot">Rajkot</option>
+                                                                <option value="Ahemedabad">Ahemedabad</option>
                                                             </select>
                                                             <span class="help-block"></span>
                                                         </div>
@@ -187,6 +189,17 @@
                                                                 <option value="" selected="selected">Select Course *
                                                                 </option>
                                                                 <option value="test" selected>test</option>
+                                                                 <option value="Agriculture">Agriculture</option>
+                                                                <option value="Basic Science">Basic Science</option>
+                                                                <option value="Business Management">Business Management</option>
+                                                                <option value="Computer Application">Computer Application</option>
+                                                                <option value="Engineering">Engineering</option>
+                                                                <option value="Hotel Management">Hotel Management</option>
+                                                                <option value="Law">Law</option>
+                                                                <option value="Nursing">Nursing</option>
+                                                                <option value="Paramedical Science">Paramedical Science</option>
+                                                                <option value="Pharmacy">Pharmacy</option>
+                                                                <option value="Physiotherapy">Physiotherapy</option>
                                                             </select>
                                                             <span class="help-block"></span>
                                                         </div>
@@ -345,8 +358,186 @@
                 </div>
             </div>
         </section>
+         <section class="slider-section">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-sm-12 mt-5">
+         <a data-fancybox href="https://www.youtube.com/embed/EJisAItv8bo&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0"><img src="{{asset('img/lifeatrku.jpg')}}" class="desktop-view" style="width: 100%;" /><img src="{{asset('img/lifeatrku_mobile.jpg')}}" class="mobile-view" style="width: 100%;" /></a>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="pd-60 bg-1">
+            <div class="container">
+               <!-- Three columns of text below the carousel -->
+               <div class="row">
+                  <div class="col-md-12 hdg">
+                     <h2>Make you aspirations come true with the dream companies <span>@RKU</span></h2>
+                      <div class="row">
+                        <section class="testimonial">
+   <div class="container-fluid">
+      <a href="https://www.youtube.com/watch?v=bk3thLI3kCg&list=PLzP3jwPwsawa2EPST9mchSyd6qPzb5xB-" target="_blank" >
+      <img src="{{asset('img/2.png')}}" class="desktop"></img></a>
+      <a href="https://www.youtube.com/watch?v=bk3thLI3kCg&list=PLzP3jwPwsawa2EPST9mchSyd6qPzb5xB-" target="_blank" >
+      <img src="{{asset('img/2_mobile.jpg')}}" class="mobile"></img></a>
+   </div>
+</section>
+                     </div>
+                  </div>
+               </div>
+               <!-- /.row --><!-- /END THE FEATURETTES -->
+            </div>
+         </section>
+         <div class="container-fluid">       
+      <div class="col-md-12 hdg">
+         <h2 class="sub-title text-center">Awards &amp; <span>Recognition</span></h2>          
+      </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="{{asset('img/Award_Logo1.png')}}" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{asset('img/Award_Logo2.png')}}" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{asset('img/Award_Logo4.png')}}" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+   </div>
+   <section class="pdg-1">
+            <div class="container">
+               <!-- Three columns of text below the carousel -->
+               <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0;">
+                  <div class="col-md-7"><img src="{{asset('img/round-graph.jpg')}}" width="100%"></div>
+                  <div class="col-md-5">
+                     <div class="row">
+                        <div class="col-lg-6 pbg-1">
+                           <h1>90%</h1>
+                           <p>PLACEMENT</p>
+                        </div>
+                        <!-- /.col-lg-4 -->
+                        <div class="col-lg-6 pbg-2">
+                           <p>STUDENTS FROM</p>
+                           <h1>18+</h1>
+                           <p>COUNTRIES</p>
+                        </div>
+                        <!-- /.col-lg-4 -->
+                     </div>
+                     <div class="row">
+                        <div class="col-lg-6 pbg-2 flex-column order-2 order-lg-1">
+                           <h1>250+</h1>
+                           <p>International Students</p>
+                        </div>
+                        <!-- /.col-lg-4 -->
+                        <div class="col-lg-6 pbg-1 flex-column order-1 order-lg-2">
+                           <h1>7.0<span style="font-size: 24px;">LPA</span></h1>
+                           <p>HIGHEST PACKAGE<br>OFFERED IN ENGINEERING</p>
+                        </div>
+                        <!-- /.col-lg-4 -->
+                     </div>
+                     <div class="row">
+                        <div class="col-lg-6 pbg-1">
+                           <h1>7.20<span style="font-size: 24px;">LPA</span></h1>
+                           <p>HIGHEST PACKAGE<br>OFFERED IN MANAGEMENT</p>
+                        </div>
+                        <!-- /.col-lg-4 -->
+                        <div class="col-lg-6 pbg-2">
+                           <h1>208<span style="font-size: 24px;">+</span></h1>
+                           <p>Companies Visited</p>
+                        </div>
+                        <!-- /.col-lg-4 -->
+                     </div>
+                  </div>
+               </div>
+               <!-- /.row --><!-- /END THE FEATURETTES -->
+            </div>
+         </section>
+          <section class="pd-60">
+            <div class="container">
+               <!-- Three columns of text below the carousel -->
+               <div class="row">
+                  <div class="col-md-12 hdg">
+                     <h2><span>175+</span>Campus drives for 2022 Batch so far<br><span>Many </span>ongoing drives !</h2>
+                     <div class="row"><img src="{{asset('img/campus_drive.png')}}" width="100%"></div>
+                  </div>
+               </div>
+               <!-- /.row --><!-- /END THE FEATURETTES -->
+            </div>
+         </section>
+
+
+         <!-- style tag -->
+         <style type="text/css">.tt>img {
+            max-width: 10%;
+            margin: 0 auto;
+            }
+            .owl-nav {
+            display: none;
+            }
+         </style>
+
+
+<footer>
+           
+<div class="newFooter">
+   
+   <div class="container">
+      <img src="img/logo.png" class="footerImg"></img>
+      <div class="row">
+         <div class="col-lg-6 col-md-6 col-sm-6">
+            <p class="mb-5"> <strong>RKU Main Campus: </strong></p>
+            <p>RK University, Bhavnagar Highway,<br>Kasturbadham, Rajkot - 360020, <br> Gujarat, India.</p>
+         </div>
+         <div class="col-lg-6 col-md-6 col-sm-6">
+            <p class="mb-5"> <strong>RKU City Campus: </strong></p>
+            <p>2<sup>nd</sup> Ring Road, Near Kalawad Road,<br>Mota Mawa, Rajkot - 360005, <br>Gujarat, India.</p>
+         </div>
+      </div>
+      <div class="row ">
+         <div class="col-sm-12 col-xs-12">
+            <a href="#" class="footerbtn">Apply Now</a>
+            <a href="#" class="footerbtn" id="expertcallbtn" >Get Expert Call</a>
+         </div>
+      </div>
+      <div class="row mt-20">
+         <div class="col-sm-12 col-xs-12">
+            <p><strong>Helpline:</strong> +91 97124 89122 / +91 99257 14450&nbsp; | <strong>Reception:</strong> +91-9909952030/31&nbsp; <strong><br> Email:</strong> inquiry@rku.ac.in</p>
+         </div>
+      </div>
+   </div>
+   
+</div>
+<div class="newFooter2 container-fluid">
+   <p>Copyright &copy; RK University 2022</p>
+</div>
+         </footer>
     </div>
     <!-- End Hero -->
+    <script src="{{asset('js/jquery1.12.4.min.js?1546583265')}}"></script>
+      <script src="{{asset('js/popper.min.js?1645250273')}}"></script>
+      <script src="{{asset('js/bootstrap.min2.js?1645255950')}}"></script>
+      <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+      <script src="{{asset('js/common.js?1645258301')}}"></script>
+      <script src="{{asset('js/anonymous_user.js?1648132643')}}"></script>
+      <script src="{{asset('js/mobile_otp.js?1645721309')}}"></script>
+      <script src="{{asset('js/theme.js?1640168978')}}"></script>
+      <script src="{{asset('js/college/bootstrap-datepicker.js?1640168975')}}"></script>
+      <script src="{{asset('js/college/bootstrap-datepicker.js?1640168975')}}"></script>
 </body>
 
 </html>

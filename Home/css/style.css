@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family: "Open Sans", sans-serif;
     src: url('../fonts/Gisha.woff2') format('woff2'), url('../fonts/Gisha.woff') format('woff');
@@ -49,11 +47,11 @@ h1 {
 }
 
 .bg-banner {
-    background-image: url('../img/slider1.jpg');
+    background-image: url('../img/slider.jpg');
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center 50%;
+      background-position: right 70%;
 }
 
 #home {
@@ -865,10 +863,10 @@ button.owl-next span {
 }
 .mmdu-img
 {
-	background-image: url(../img/slider1.jpg);
+	background-image: url(../img/slider.jpg);
     min-height: 100vh;
 	background-size: cover;
-    background-position: center 50%;
+      background-position: right 70%;
 }
 .pd-80
 {
@@ -1109,10 +1107,10 @@ p {
 }
 .mmdu-img
 {
-	background-image: url(../img/slider1.jpg);
+	background-image: url(../img/slider.jpg);
     min-height: 100vh;
 	background-size: cover;
-    background-position: center 50%;
+    background-position: right 70%;
 }
 .pd-80
 {
@@ -1202,7 +1200,7 @@ p {
 	background-size: cover;
 }
 .mmdu-adsnfrm {
-    margin-top:130px; 
+    margin-top:0px; 
     box-shadow: 0 0 20px #000;
     border-radius: 5px;
     padding: 10px;
