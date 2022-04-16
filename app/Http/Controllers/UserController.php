@@ -76,7 +76,14 @@ class UserController extends Controller
             'mobile' => $request->mobile,
             'city' => $request->city,
             'state' => $request->state,
-            'course'=>$request->course
+            'course'=>$request->course,
+            'fathername'=>$request->fathername,
+            'gender'=>$request->gender,
+            'dateofbirth'=>$request->dateofbirth,
+            'address'=>$request->address,
+            'pincode'=>$request->pincode,
+            'fathermobile'=>$request->fathermobile,
+            'specialization'=>$request->specialization
         ]);
         return redirect()->route('dashboard')->with( 'success', 'User Profile Update Successfully');
     }

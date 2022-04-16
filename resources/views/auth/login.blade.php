@@ -170,7 +170,6 @@
                                                             class="form-group label-floating reg_university_id_div UniversityId field-select">
                                                             <select name="university" id="UniversityId"
                                                                 class="form-control select-arrow-cust widget_input"
-                                                                onchange="GetChildByMachineKey(this.value,'CourseId');"
                                                                 data-label="Select Institute *"
                                                                 data-none-selected-text="Select New Campus">
                                                                 <option value="" selected="selected">Select Institute *
@@ -183,7 +182,6 @@
                                                             class="form-group label-floating reg_course_id_div CourseId field-select">
                                                             <select name="course" id="CourseId"
                                                                 class="form-control select-arrow-cust widget_input"
-                                                                onchange="GetChildByMachineKey(this.value,'SpecializationId');"
                                                                 data-label="Select Course *"
                                                                 data-none-selected-text="Select Course">
                                                                 <option value="" selected="selected">Select Course *

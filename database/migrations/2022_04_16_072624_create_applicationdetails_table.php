@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateApplicationDetailsTable extends Migration
+class CreateApplicationdetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,9 @@ class CreateApplicationDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('_application_details', function (Blueprint $table) {
+        Schema::create('applicationdetails', function (Blueprint $table) {
             $table->id('applicationid');
             $table->string('userid');
-            $table->string('fathername');
-            $table->string('gender');
-            $table->date('dateofbirth');
-            $table->string('address');
-            $table->string('pincode');
-            $table->string('fathermobile');
             $table->string('applicationforprogram');
             $table->string('coursename');
             $table->string('applicationstatus');
@@ -36,6 +30,6 @@ class CreateApplicationDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_application_details');
+        Schema::dropIfExists('applicationdetails');
     }
 }

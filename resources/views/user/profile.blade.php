@@ -63,26 +63,26 @@
                               <!-- Last name -->
                               <div class="mb-3 col-12 col-md-6">
                                  <label class="form-label" for="fname">Father Name</label>
-                                 <input type="text" id="dname" class="form-control" placeholder="Father Name" required />
+                                 <input type="text" id="dname" name="fathername" class="form-control" placeholder="Father Name" value="{{auth()->user()->fathername}}" required />
                               </div>
                               <div class="mb-3 col-12 col-md-6">
                                  <label class="form-label">Gender</label>
                                  <select name="gender" class="gender form-control" id="gender">
                                     <option value="">Select Gender</option>
-                                    <option value="">Male</option>
-                                    <option value="">Female</option>
+                                    <option @if(auth()->user()->state == 'Male')selected @endif>Male</option>
+                                    <option @if(auth()->user()->state == 'Female')selected @endif>Female</option>
                                  </select>
                               </div>
                               <!-- Birthday -->
                               <div class="mb-3 col-12 col-md-6">
                                  <label class="form-label" for="birth">Birthday</label>
-                                 <input class="form-control flatpickr" type="text" placeholder="Birth of Date" id="birth"
-                                    name="birth" />
+                                 <input class="form-control flatpickr" type="date" name="dateofbirth" placeholder="Birth of Date" id="birth"
+                                    value="{{auth()->user()->dateofbirth}}" />
                               </div>
                               <!-- Address -->
                               <div class="mb-3 col-12 col-md-6">
                                  <label class="form-label" for="address">Address</label>
-                                 <input type="text" id="address" class="form-control" placeholder="Address" required />
+                                 <input type="text" name="address" id="address" class="form-control" placeholder="Address" value="{{auth()->user()->dateofbirth}}" required />
                               </div>
                               <!-- State -->
                               <div class="mb-3 col-12 col-md-6">
@@ -107,7 +107,7 @@
                               <!-- pincode -->
                               <div class="mb-3 col-12 col-md-6">
                                  <label class="form-label" for="pincode">Pincode</label>
-                                 <input type="text" id="pincode" class="form-control" placeholder="Pincode" required />
+                                 <input type="text" id="pincode" name="pincode" class="form-control" placeholder="Pincode" value="{{auth()->user()->pincode}}" required />
                               </div>
                               <!--  admission in -->
                               <div class="mb-3 col-12 col-md-6">
@@ -135,7 +135,7 @@
                               <!-- Phone father-->
                               <div class="mb-3 col-12 col-md-6">
                                  <label class="form-label" for="cnof">Contact Number of Student's Father</label>
-                                 <input type="text" id="cnof" class="form-control" placeholder="Contact Number of Student's Father" required />
+                                 <input type="text" id="cnof" name="fathermobile" class="form-control" placeholder="Contact Number of Student's Father" value="{{auth()->user()->fathermobile}}" required />
                               </div>
                               <div class="col-12">
                                  <!-- Button -->

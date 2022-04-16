@@ -15,10 +15,11 @@ class CreateAcademicdetailsTable extends Migration
     {
         Schema::create('academicdetails', function (Blueprint $table) {
             $table->id();
-            $table->string('adid');
+            $table->string('userid');
             $table->string('leavingcertificate');
             $table->string('aadharcard');
             $table->string('marksheet10');
+            $table->string('marksheetd2d');
             $table->string('marksheet12');
             $table->string('marksheetgraduation');
             $table->timestamps();
