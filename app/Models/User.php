@@ -18,7 +18,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name','password','email','mobile','city','state','course','specialization','institute',
+        'name','password','email','mobile','city','state','course','specialization','institute','fathername','gender','dateofbirth','address','pincode','fathermobile',
     ];
 
     /**
@@ -40,6 +40,6 @@ class User extends Authenticatable implements MustVerifyEmail
     ];
     public function appdetail()
     {
-        return $this->belongsToMany(Applicationdetail::class,'user_id'); 
+        return $this->belongsToMany(Applicationdetail::class,'id'); 
     }
 }
