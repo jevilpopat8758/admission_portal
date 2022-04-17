@@ -14,7 +14,7 @@ class CreateApplicationdetailsTable extends Migration
     public function up()
     {
         Schema::create('applicationdetails', function (Blueprint $table) {
-            $table->id('applicationid');
+            $table->id('id');
             $table->string('userid');
             $table->string('applicationforprogram');
             $table->string('coursename');

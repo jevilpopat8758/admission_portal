@@ -14,8 +14,7 @@ class CreateAcademicdetailsTable extends Migration
     public function up()
     {
         Schema::create('academicdetails', function (Blueprint $table) {
-            $table->id();
-            $table->string('userid');
+            $table->id('id');
             $table->string('leavingcertificate');
             $table->string('aadharcard');
             $table->string('marksheet10');
