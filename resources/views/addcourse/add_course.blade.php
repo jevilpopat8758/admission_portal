@@ -100,8 +100,8 @@
                                                         <div class="col-lg-6">
                                                             <label class="form-label">Select Specialization</label>
                                                             <select class="selectpicker" name="coursename" data-width="100%">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -131,16 +131,19 @@
                                         <div class="card-header border-bottom px-4 py-3">
                                             <h4 class="mb-0"><strong class="text-danger"> Personal Details </strong></h4>
                                         </div>
+                                        <form action="{{route('user.update',auth()->user())}}" method="POST" enctype="multipart/form-data" class="row">
+                                       @csrf
+                                      @method('PUT')
                                         <!-- Card body -->
                                         <div class="card-body">
                                             <div class="row mb-3">
                                                 <div class="col-lg-4">
                                                     <label for="courseTitle" class="form-label">Name</label>
-                                                    <input id="courseTitle" class="form-control" name="name" type="text" placeholder="Enter Name" />
+                                                    <input id="courseTitle" class="form-control" name="name" type="text" placeholder="Enter Name" value=""{{auth()->user()->email}}"" />
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <label for="courseTitle" class="form-label">Email</label>
-                                                    <input id="courseTitle" class="form-control" name="email" type="email" placeholder="Enter Email" />
+                                                    <input id="courseTitle" class="form-control" name="email" type="email"  placeholder="Enter Email" />
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <label for="courseTitle" class="form-label">Mobile No.</label>
@@ -540,6 +543,7 @@
                                         </div>
                                     </div>
                                 </div>
+                             </form>
                                 <!-- Content two -->
                                 <div id="test-l-3" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="courseFormtrigger3">
                                 <!-- Card -->

@@ -19,12 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('mobile');
-            //$table->string('fathername');
-            //$table->string('gender');
-            //$table->date('dateofbirth');
-            //$table->string('address');
-            //$table->string('pincode');
-            //$table->string('fathermobile');
+            $table->string('fathername');
+            $table->string('gender');
+            $table->date('dateofbirth');
+            $table->string('address');
+            $table->string('pincode');
+            $table->string('fathermobile');
             $table->string('is_verified')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('city');

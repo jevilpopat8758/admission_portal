@@ -10,13 +10,13 @@ class Applicationdetail extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'userid',
+        'user_id',
         'applicationforprogram',
         'coursename',
         'applicationstatus'
     ];
 
      public function users(){
-        return $this->hasMany(User::class);
+        return $this->hasMany(User::class,'id');
     }
 }

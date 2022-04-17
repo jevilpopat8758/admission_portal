@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Applicationdetail;
 use App\Models\User;
-use Auth;
 
 class AddCourseController extends Controller
 {
@@ -26,7 +25,9 @@ class AddCourseController extends Controller
      */
     public function create()
     {
-        return view('addcourse.add_course',['user' =>Auth::User()->id]);
+        $user_id=User::all();
+        $Applicationdetail=Applicationdetail::all();   
+        return view('addcourse.add_course',compact('Applicationdetail','user_id'));
     }
     /**
      * Store a newly created resource in storage.
@@ -36,12 +37,13 @@ class AddCourseController extends Controller
      */
     public function store(Request $request)
     {
-        Applicationdetail::create([
-            'userid' => $request->userid,
-            'applicationforprogram' => $request->applicationforprogram,
-            'coursename' => $request->coursename,
-            'applicationstatus'=>0
-        ]);
+        //dd(\Auth::check());
+        $add=new Applicationdetail;
+        $add->user_id=\Auth::user()->id;
+        $add->applicationforprogram=$request->applicationforprogram;
+        $add->coursename=$request->coursename;
+        $add->applicationstatus=0;
+        $add->save();
         return redirect()->route('stu.addcousrse');
     }
 

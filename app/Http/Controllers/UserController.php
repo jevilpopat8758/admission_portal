@@ -82,9 +82,7 @@ class UserController extends Controller
             'dateofbirth'=>$request->dateofbirth,
             'address'=>$request->address,
             'pincode'=>$request->pincode,
-            'fathermobile'=>$request->fathermobile,
-            'specialization'=>$request->specialization,
-            'institute'=>$request->institute,
+            'fathermobile'=>$request->fathermobile   
         ]);
         return redirect()->route('dashboard')->with( 'success', 'User Profile Update Successfully');
     }
