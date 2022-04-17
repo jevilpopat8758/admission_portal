@@ -83,7 +83,8 @@ class UserController extends Controller
             'address'=>$request->address,
             'pincode'=>$request->pincode,
             'fathermobile'=>$request->fathermobile,
-            'specialization'=>$request->specialization
+            'specialization'=>$request->specialization,
+            'institute'=>$request->institute,
         ]);
         return redirect()->route('dashboard')->with( 'success', 'User Profile Update Successfully');
     }

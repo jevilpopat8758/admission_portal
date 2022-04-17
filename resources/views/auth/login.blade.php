@@ -53,8 +53,6 @@
                             <!--  <div class="form-inner"><div class="form-clickOuter"><span class="form-click opacityprimary">Register Now</span></div>-->
                             <h2 class="text-center form-heading">Admissions Open</h2>
                             <!--register login panel-->
-                            <!--register login panel-->
-                            <!--register login panel-->
                             <div class="panel with-nav-tabs panel-default dynamic_theme_block">
                                 <div class="panel-heading">
                                     <ul class="nav nav-tabs">
@@ -81,12 +79,10 @@
                                                                     autocomplete="off"
                                                                     class="form-control widget_input registerJsClass @error('password') is-invalid @enderror"
                                                                     placeholder="Enter Password  *">
+                                                                    @if ($errors->has('password'))
+                                                                        <span class="text-danger">{{ $errors->first('password') }}</span>
+                                                                    @endif
                                                             </div>
-                                                            @error('password')
-                                                            <span class="invalid-feedback" role="alert">
-                                                                <strong>{{ $message }}</strong>
-                                                            </span>
-                                                            @enderror
                                                             <span class="help-block"></span>
                                                         </div>
                                                         <div class="form-group label-floating reg_name_div">
@@ -98,12 +94,10 @@
                                                                     class="form-control widget_input @error('name') is-invalid @enderror"
                                                                     placeholder="Enter Name *"
                                                                     value="{{ old('name') }}">
+                                                                    @if ($errors->has('name'))
+                                                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                                                    @endif
                                                             </div>
-                                                            @error('name')
-                                                            <span class="invalid-feedback" role="alert">
-                                                                <strong>{{ $message }}</strong>
-                                                            </span>
-                                                            @enderror
                                                             <span class="help-block"></span>
                                                         </div>
                                                         <div
@@ -117,12 +111,10 @@
                                                                     class="form-control widget_input @error('email') is-invalid @enderror"
                                                                     placeholder="Enter Email Address *"
                                                                     value="{{ old('email') }}">
+                                                                    @if ($errors->has('email'))
+                                                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                                                    @endif
                                                             </div>
-                                                            @error('email')
-                                                            <span class="invalid-feedback" role="alert">
-                                                                <strong>{{ $message }}</strong>
-                                                            </span>
-                                                            @enderror
                                                             <span class="help-block"></span>
                                                         </div>
                                                         <div class="form-group label-floating reg_name_div">
@@ -132,7 +124,10 @@
                                                                         class="required">*</span></label>
                                                                 <input type="number" name="mobile" id="mobile"
                                                                     autocomplete="off" class="form-control widget_input"
-                                                                    placeholder="Enter Mobile Number *" value="">
+                                                                    placeholder="Enter Mobile Number *" value="{{ old('mobile') }}">
+                                                                    @if ($errors->has('mobile'))
+                                                                        <span class="text-danger">{{ $errors->first('mobile') }}</span>
+                                                                    @endif
                                                             </div>
                                                             <span class="help-block"></span>
                                                         </div>
@@ -168,7 +163,7 @@
                                                         <div class="clearfix"></div>
                                                         <div
                                                             class="form-group label-floating reg_university_id_div UniversityId field-select">
-                                                            <select name="university" id="UniversityId"
+                                                            <select name="institute" id="UniversityId"
                                                                 class="form-control select-arrow-cust widget_input"
                                                                 data-label="Select Institute *"
                                                                 data-none-selected-text="Select New Campus">
@@ -176,6 +171,9 @@
                                                                 </option>
                                                                 <option value="196118">Mullana</option>
                                                             </select>
+                                                            @if ($errors->has('institute'))
+                                                                <span class="text-danger">{{ $errors->first('institute') }}</span>
+                                                            @endif
                                                             <span class="help-block"></span>
                                                         </div>
                                                         <div
@@ -245,11 +243,10 @@
                                                             name="email" id="loginEmail" maxlength="50"
                                                             class="placeholder form-control @error('email') is-invalid @enderror"
                                                             autocomplete="off" value="{{ old('email') }}">
-                                                        @error('email')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                        @enderror<span class="help-block"></span>
+                                                            @if ($errors->has('email'))
+                                                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                                                            @endif
+                                                        <span class="help-block"></span>
                                                     </div>
                                                     <div class="form-group label-floating"><label class="control-label"
                                                             for="loginPassword">{{ __('Password') }}<span
@@ -257,11 +254,10 @@
                                                             name="password" id="loginPassword" maxlength="15"
                                                             class="placeholder form-control @error('password') is-invalid @enderror"
                                                             autocomplete="off" value="">
-                                                        @error('password')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                        @enderror<span class="help-block"></span>
+                                                            @if ($errors->has('password'))
+                                                                <span class="text-danger">{{ $errors->first('password') }}</span>
+                                                            @endif
+                                                        <span class="help-block"></span>
                                                     </div>
                                                     <div class="form-group  agree-group">
                                                         <div class="checkbox"><label><input type="hidden" name="Agree"

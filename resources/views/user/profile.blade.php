@@ -31,7 +31,7 @@
                         </div>
                      </div>
                      <div>
-                        <a href="dashboard.html" class="btn btn-outline-primary btn-sm d-none d-md-block">Go to
+                        <a href="{{ route('dashboard') }}" class="btn btn-outline-primary btn-sm d-none d-md-block">Go to
                         Dashboard</a>
                      </div>
                   </div>
