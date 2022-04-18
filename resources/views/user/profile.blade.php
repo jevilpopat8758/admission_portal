@@ -82,7 +82,7 @@
                               <!-- Address -->
                               <div class="mb-3 col-12 col-md-6">
                                  <label class="form-label" for="address">Address</label>
-                                 <input type="text" name="address" id="address" class="form-control" placeholder="Address" value="{{auth()->user()->dateofbirth}}" required />
+                                 <input type="text" name="address" id="address" class="form-control" placeholder="Address" value="{{auth()->user()->address}}" required />
                               </div>
                               <!-- State -->
                               <div class="mb-3 col-12 col-md-6">
@@ -99,9 +99,9 @@
                               <div class="mb-3 col-12 col-md-6">
                                  <label class="form-label">City</label>
                                  <select name="city" class="cities form-control" id="cityId">
-                                    <option @if(auth()->user()->state == 'Test')selected @endif>Test</option>
-                                    <option @if(auth()->user()->state == 'Rajkot')selected @endif>Rajkot</option>
-                                    <option @if(auth()->user()->state == 'Ahemedabad')selected @endif>Ahemedabad</option>
+                                    <option @if(auth()->user()->city == 'Test')selected @endif>Test</option>
+                                    <option @if(auth()->user()->city == 'Rajkot')selected @endif>Rajkot</option>
+                                    <option @if(auth()->user()->city == 'Ahemedabad')selected @endif>Ahemedabad</option>
                                  </select>
                               </div>
                               <!-- pincode -->
